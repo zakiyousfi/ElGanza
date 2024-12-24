@@ -1,0 +1,64 @@
+<div class="col-lg-12 grid-margin stretch-card" style="margin-top: 10px; background-color: rgb(255, 196, 196);">
+    <div class="card">
+      <div class="card-body">
+        <h4 style="text-align: center;font-size:50px; " class="card-title">Tableau Reservations</h4>
+        <div style="margin-top:20px;" class="table-responsive">
+          <table style="text-align: center;" class="table table-striped">
+            <thead>
+              <tr>
+                <th>
+                  id
+                </th>
+                <th>
+                  image parfume
+                </th>
+                <th>
+                  Nom parfume
+                </th>
+                
+                <th>
+                    prix
+                </th>
+                <th>
+                    mode De Payement
+                </th>
+                <th>
+                    Facture
+                </th>
+                <th>
+                   Delet
+                </th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let r of achatTab">
+              <tr>
+                <td>
+                  {{r.id}}
+                </td>
+                <td>
+                  <img style="width:80px;" [src]="r.img" alt="img">
+                </td>
+                <td>
+                  {{r.name}}
+                </td>
+               
+                <td style="color: blue;">
+                  {{r.prix}} DT
+                </td>
+               <td>
+                  {{r.modeDePayement}}
+                </td>
+                <td>
+                    <button (click)="facture(r.id)"  type="button" class="btn btn-success">Facture</button>
+                </td>
+                <td>
+                    <button (click)="delet(r.id)" type="button" class="btn btn-danger">Delet</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>.</div>

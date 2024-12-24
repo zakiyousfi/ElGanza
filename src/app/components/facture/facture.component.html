@@ -1,0 +1,83 @@
+<div style="margin-top:75px;">
+    <div class="card">
+        <div class="card-body">
+            <div id="invoice">
+                <div class="invoice overflow-auto">
+                    <div style="min-width: 600px">
+                        <header>
+                            <div class="row">
+                                <div class="col company-details">
+                                    <h2 class="name">
+                                        <a target="_blank" href="javascript:;">
+									    eya's Location
+									</a>
+                                    </h2>
+                                    <div>kram , tunis</div>
+                             
+                                </div>
+                            </div>
+                        </header>
+                        <main>
+                            <div class="row contacts">
+                                <div class="col invoice-to">
+                                    <div class="text-gray-light">facture pour:</div>
+                                    <h2 class="to">{{facture.nom}} {{facture.prenom}}</h2>
+                                    <div class="email"><a>{{facture.email}}</a>
+                                    </div>
+                                </div>
+                                <div class="col invoice-details">
+                                    <h1 class="invoice-id">Facture</h1>
+                                    <div class="date" style="color:green;">numéro de reçu: {{facture.id}}</div>
+                                </div>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="text-left">REF</th>
+                                        <th class="text-left">name</th>
+                                        <th class="text-right">date De Depart</th>
+                                        <th class="text-right">date De Retrait</th>
+                                        <th class="text-right">heure De Depart</th>
+                                        <th class="text-right">heure De Retour</th>
+                                        <th class="text-right">Category</th>
+                                        <th class="text-right">Méthode de payment</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-left">
+                                            <h3>
+                                                <a>{{facture.carId}}</a>
+                                            </h3>
+                                        </td>
+                                        <td class="unit">{{facture.name}}</td>
+                                        <td class="unit">{{facture.dateDeDepart}}</td>
+                                        <td class="unit">{{facture.dateDeRetrait}}</td>
+                                        <td class="unit">{{facture.heureDeDepart}}.h</td>
+                                        <td class="unit">{{facture.heureDeRetour}}.h</td>
+                                        <td class="qty">{{facture.Category}}</td>
+                                        <td class="total">{{facture.modeDePayement}}</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2"></td>
+                                        <td colspan="2">TOTAL PRIX</td>
+                                        <td>{{facture.prix}}.DT</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <div class="notices">
+                                <div>Merci:</div>
+                                <div class="notice">Cet article ne peut pas être retourné après 30 jours.</div>
+                            </div>
+                        </main>
+                        <footer></footer>
+                    </div>
+                    <!--DO NOT DELETE THIS div. IT is responsible for showing footer always at the bottom-->
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

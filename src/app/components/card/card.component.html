@@ -1,0 +1,15 @@
+<section class="card">
+<div class="product-image">
+    <img style="height:200px;margin-top:20px;" [src]="x.img" alt="OFF-white Red Edition" draggable="false" />
+  </div>
+  <div class="product-info">
+    <p style="color: rgb(99, 1, 164);margin-top: 4px;">{{x.Category}}</p>
+    <h1 style="color: rgb(164, 1, 1);margin-top: 10px;">{{x.name}}</h1>
+    <h1 style="margin-top:15px;color: green;">{{x.prix}}.Dt</h1>  
+    <div style="margin-top:13px;">
+        <a (click)="achat(x.id)" class="button" style="--color: rgb(164, 1, 1)">
+            Acheter
+        </a>
+    </div>
+  </div>
+</section>

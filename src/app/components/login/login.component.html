@@ -1,0 +1,25 @@
+<div class="site-section" style="margin-top:30px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-8">
+            <form [formGroup]="loginForm">
+                <div class="form-group">
+                  <input type="text" formControlName="email" class="form-control" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input type="password" formControlName="pwd" class="form-control" name="pwd" placeholder="password">
+                </div>
+                <div style="margin-left:43%;" class="form-group">
+                  <input type="button" (click)="login()"  class="btn btn-success py-3 px-5" value="login">
+                </div>
+              </form> 
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+      </div>
+    </div>
+</div>
